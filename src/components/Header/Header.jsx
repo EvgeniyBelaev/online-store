@@ -1,0 +1,24 @@
+import { NavLink } from 'react-router-dom'
+
+import PropTypes from 'prop-types';
+import style from './Header.module.css';
+
+const Header = () => {
+    return (
+        <div className={style.container}>
+            <ul className={style.list__container}>
+                <li><NavLink to='/'>Главная</NavLink></li>
+                <li><NavLink to='/womancloth'>Женская одежда</NavLink></li>
+                <li><NavLink to='/menscloth'>Мужская одежда</NavLink></li>
+                <li><NavLink to='/jewerly'>Украшения</NavLink></li>
+            </ul>
+        </div>
+    );
+}
+
+// Header.propTypes = {
+//     text: PropTypes.string
+// }
+
+
+export default Header;

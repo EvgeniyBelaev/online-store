@@ -4,6 +4,8 @@ module.exports = function override(config, env) {
     alias({
         '@components': 'src/components',
         '@containers': 'src/containers',
+        '@routes': 'src/routes',
+        '@styles': 'src/styles',
 
     })(config)
     return config;

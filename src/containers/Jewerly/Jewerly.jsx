@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 const Jewerly = () => {
     return (
-        <>Jewerly</>
+        <h1>Jewerly</h1>
     );
 }
 
-Jewerly.propTypes = {
-    text: PropTypes.string
-}
+// Jewerly.propTypes = {
+//     text: PropTypes.string
+// }
 
 
 export default Jewerly;

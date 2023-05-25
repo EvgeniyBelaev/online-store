@@ -1,9 +1,23 @@
-
+import { Route, Routes } from 'react-router-dom';
+import Header from '@components/Header';
+import routesConfig from '@routes/routesConfig'
+import style from './App.module.css'
 
 
 function App() {
   return (
-    <h1>hello</h1>
+    <div className={style.wrapper}>
+      <Header />
+      <Routes>
+        {routesConfig.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={route.element}
+          />
+        ))}
+      </Routes>
+    </div>
   );
 }
 
