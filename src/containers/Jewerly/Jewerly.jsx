@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Jewerly = () => {
     return (
-        <h1>Jewerly</h1>
+        <h1 className='header__text'>Jewerly</h1>
     );
 }
 
