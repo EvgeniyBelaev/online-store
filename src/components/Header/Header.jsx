@@ -6,7 +6,7 @@ import style from './Header.module.css';
 
 const Header = () => {
     return (
-        <div className={style.container}>
+        <header className={style.container}>
             <img src={Logo} alt="logo" className={style.header__logo} />
             <ul className={style.list__container}>
                 <li><NavLink to='/'>Главная</NavLink></li>
@@ -15,7 +15,7 @@ const Header = () => {
                 <li><NavLink to='/menscloth'>Мужская одежда</NavLink></li>
                 <li><NavLink to='/jewerly'>Украшения</NavLink></li>
             </ul>
-        </div>
+        </header>
     );
 }
 

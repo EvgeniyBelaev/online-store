@@ -1,0 +1,9 @@
+.wrapper {
+    margin: 0;
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-small);
+    max-width: 100%;
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    text-align: center;
+}
