@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const HomePage = () => {
     return (
-        <>Home Page</>
+        <h1 className='header__text'>Только новейшие коллекции 2023 года</h1>
     );
 }
 

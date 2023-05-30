@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Footer = () => {
     return (
-        <footer className={style.wrapper}>2023</footer>
+        <footer className={style.wrapper}>Create by Fake Store API. 2023</footer>
     );
 }
 
