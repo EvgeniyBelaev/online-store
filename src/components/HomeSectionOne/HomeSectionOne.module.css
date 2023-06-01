@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    width: 580px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--color-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -2;
+}
+.img {
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.background {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background-color: var(--color-black);
+    z-index: -1;
+
+}
+.background:last-child {
+    margin-top: 280px;
+}
+.text {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-header);
+    letter-spacing: var(--letter-spacing-small);
+}
