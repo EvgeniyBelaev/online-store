@@ -10,11 +10,11 @@ const Header = () => {
             <div className={style.header__nvigation}>
                 <p className={style.logo}>Lorem ipsum store</p>
                 <ul className={style.list__container}>
-                    <li><NavLink to='/'>Главная</NavLink></li>
-                    <li><NavLink to='/catalog'>Вся коллекция</NavLink></li>
-                    <li><NavLink to='/womancloth'>Женщинам</NavLink></li>
-                    <li><NavLink to='/menscloth'>Мужчинам</NavLink></li>
-                    <li><NavLink to='/jewerly'>Украшения</NavLink></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/catalog'>All Catalog</NavLink></li>
+                    <li><NavLink to='/womancloth'>For Woman</NavLink></li>
+                    <li><NavLink to='/menscloth'>For Man</NavLink></li>
+                    <li><NavLink to='/jewerly'>Jewerly</NavLink></li>
                 </ul>
             </div>
             <div className={style.header__info}>

@@ -18,14 +18,13 @@
     margin-bottom: var(--spacing-large);
     object-fit: cover;
     object-position: center center;
+    z-index: 1;
 }
 .background {
     position: absolute;
     width: 550px;
     height: 550px;
     background-color: var(--color-black);
-    z-index: -1;
-
 }
 .background:last-child {
     margin-top: 280px;
@@ -35,6 +34,10 @@
     padding: 0;
     font-size: var(--font-size-header);
     letter-spacing: var(--letter-spacing-small);
+}
+a {
+    text-decoration: none;
+    color: var(--color-black);
 }
 
 .wrapper__jewerly {
