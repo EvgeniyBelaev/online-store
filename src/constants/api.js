@@ -2,7 +2,7 @@ export const HTTPS = 'https://'
 
 export const STORE_ROOT = 'fakestoreapi.com/'
 export const STORE_PRODUCTS = 'products'
-export const STORE_CATEGORIES = '/categories'
+export const STORE_CATEGORIES = '/category'
 export const STORE_MENS = "/men's clothing"
 export const STORE_WOMENS = "/women's clothing"
 export const STORE_JEWERLY = "/jewelery"
