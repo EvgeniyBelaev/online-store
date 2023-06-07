@@ -1,9 +1,15 @@
-import style from './Jewerly.module.css';
+import Product from '@components/Product/Product';
+import { API_JEWERLY } from '@constants/api'
+
 import PropTypes from 'prop-types';
+import style from './Jewerly.module.css';
 
 const Jewerly = () => {
     return (
-        <h1 className='header__text'>Jewerly</h1>
+        <>
+            <Product baseUrl={API_JEWERLY} />
+        </>
+
     );
 }
 

@@ -3,6 +3,7 @@ import AllCatalog from '@containers/AllCatalog';
 import Jewerly from '@containers/Jewerly';
 import MensCloth from '@containers/MensCloth';
 import WomanCloth from '@containers/WomanCloth';
+import ProductPage from '@containers/ProductPage';
 
 const routesConfig =[
     {
@@ -24,6 +25,10 @@ const routesConfig =[
     {
         path: '/jewerly',
         element: <Jewerly/>
+    },
+    {
+        path: `/category/:id`,
+        element: <ProductPage/>
     },
 ]
 
