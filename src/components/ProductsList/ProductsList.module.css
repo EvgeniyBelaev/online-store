@@ -12,6 +12,7 @@
     border-radius: var(--border-radius-laege);
     background-color: var(--color-white);
     cursor: pointer;
+    transition: all var(--transition);
 }
 .list__item a {
     text-decoration: none;
@@ -22,6 +23,10 @@
     width: 100%;
     height: 260px;
     object-fit: contain;
-    object-position: top center;
+    object-position: center center;
     border-radius: var(--border-radius-laege) var(--border-radius-laege) 0 0;
+}
+.list__item:hover {
+    scale: 1.1;
+    box-shadow: var(--box-shadow-black);
 }
