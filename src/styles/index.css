@@ -25,6 +25,8 @@
   --letter-spacing-large: 15px;
   --letter-spacing-small: 4px;
 
+  --line-height: 1.5;
+
   --spacing-utrasmall: 5px;
   --spacing-small: 10px;
   --spacing-medium: 20px;
@@ -51,11 +53,10 @@
     0 0 40px var(--color-yellow);
 
   --text-swadow-black:
-    0 0 2px var(--color-white),
-    0 0 2px var(--color-black);
+    0 0 1px var(--color-white),
+    0 0 1px var(--color-black);
 
   --main-color-light: var(--color-light-gray);
-  --secondary-color-light: var(--color-olive);
 }
 
 *, *:after, *:before {

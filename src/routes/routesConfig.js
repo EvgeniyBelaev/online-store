@@ -27,7 +27,7 @@ const routesConfig =[
         element: <Jewerly/>
     },
     {
-        path: `/category/:id`,
+        path: `/products/:id`,
         element: <ProductPage/>
     },
 ]
