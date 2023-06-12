@@ -5,6 +5,7 @@ import { getApiResurse } from '@utils/network'
 import { API_PRODUCTS } from '@constants/api'
 import ProductLinkBack from '@components/ProductLinkBack'
 import ProductImage from '@components/ProductImage'
+import BinButton from '@components/BinButton'
 
 import PropTypes from 'prop-types';
 import style from './ProductPage.module.css';
@@ -45,7 +46,11 @@ const ProductPage = () => {
                     <h3 className={style.product__title}>{productTitle}</h3>
                 <div className={style.container}>
                     <ProductImage productImage={productImage} />
-                    <p className={style.product__description}>{productDescription}</p>                    
+                    <div className={style.description__container}>
+                        <p className={style.product__description}>{productDescription}</p>   
+                        <BinButton /> 
+                    </div>
+                
                 </div>
                 
 

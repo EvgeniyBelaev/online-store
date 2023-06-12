@@ -1,0 +1,10 @@
+.container{
+    width: 30px;
+    height: 30px;
+    margin-left: var(--spacing-ultralarge);
+}
+.img {
+    width: 100%;
+    height: 100%;
+
+}

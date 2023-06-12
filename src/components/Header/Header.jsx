@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Bin from '@components/Bin'
 
 
 import PropTypes from 'prop-types';
@@ -16,6 +17,7 @@ const Header = () => {
                     <li><NavLink to='/menscloth'>For Man</NavLink></li>
                     <li><NavLink to='/jewerly'>Jewerly</NavLink></li>
                 </ul>
+                <Bin />
             </div>
             <div className={style.header__info}>
                 <h1 className={style.info__header}>Lorem ipsum store</h1>

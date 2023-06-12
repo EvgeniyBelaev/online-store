@@ -15,6 +15,10 @@
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-small);
 }
+.description__container {
+    display: flex;
+    flex-direction: column;
+}
 .product__description {
     margin: 0;
     width: 600px;

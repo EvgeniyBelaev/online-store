@@ -4,6 +4,7 @@ import Jewerly from '@containers/Jewerly';
 import MensCloth from '@containers/MensCloth';
 import WomanCloth from '@containers/WomanCloth';
 import ProductPage from '@containers/ProductPage';
+import BinPage from '@containers/BinPage';
 
 const routesConfig =[
     {
@@ -29,6 +30,10 @@ const routesConfig =[
     {
         path: `/products/:id`,
         element: <ProductPage/>
+    },
+    {
+        path: `/bin`,
+        element: <BinPage/>
     },
 ]
 
