@@ -48,7 +48,13 @@ const ProductPage = () => {
                     <ProductImage productImage={productImage} />
                     <div className={style.description__container}>
                         <p className={style.product__description}>{productDescription}</p>   
-                        <BinButton /> 
+                        <span className={style.product__price}>Price: {productPrice}$</span>
+                        <BinButton 
+                            productId={productId}
+                            productTitle={productTitle}
+                            productImage={productImage}
+                            productPrice={productPrice}
+                        /> 
                     </div>
                 
                 </div>

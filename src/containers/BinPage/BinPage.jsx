@@ -1,14 +1,13 @@
+import { useSelector } from 'react-redux'
+
 import style from './BinPage.module.css';
-import PropTypes from 'prop-types';
 
 const BinPage = () => {
+    const storeData = useSelector(state => state.favoriteReducer)
+    
     return (
         <>BinPage</>
     );
-}
-
-BinPage.propTypes = {
-    text: PropTypes.string
 }
 
 

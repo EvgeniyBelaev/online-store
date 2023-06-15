@@ -25,3 +25,10 @@
     font-size: var(--font-size-subheader);
     line-height: var(--line-height);
 }
+.product__price {
+    margin: 0;
+    margin-top: var(--spacing-large);
+    padding: 0;
+    font-size: var(--font-size-subheader)
+
+}
