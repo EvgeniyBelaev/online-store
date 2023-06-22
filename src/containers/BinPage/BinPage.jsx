@@ -1,12 +1,43 @@
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux'
+
+import ProductsList from '@components/ProductsList'
 
 import style from './BinPage.module.css';
 
 const BinPage = () => {
+    const [product, setProduct] = useState([])
+
     const storeData = useSelector(state => state.favoriteReducer)
     
+
+    useEffect(() => {
+        const arr = Object.entries(storeData)
+
+        if (arr.length) {
+            const res = arr.map(item => {
+                return {
+                    id: item[0],
+                    title: item[1].title,
+                    image: item[1].img,
+                    price: item[1].price
+                }
+            })
+
+            setProduct(res)
+        }
+    }, [])
+    
     return (
-        <>BinPage</>
+        <>
+            <h1 className='header__text'>Bin</h1>
+            {product.length
+                ?<ProductsList product={product} />
+                :<h2 className={style.comment}>Your bin is emty</h2>
+            }
+            
+        </>
+
     );
 }
 
