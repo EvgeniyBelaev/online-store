@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { getApiResurse } from '@utils/network'
 import { API_PRODUCTS } from '@constants/api'
@@ -16,6 +17,11 @@ const ProductPage = () => {
     const [productDescription, setProductDescription] = useState(null)
     const [productImage, setProductImage] = useState(null)
     const [productPrice, setProductPrice] = useState(null)
+    const [productBin, setProductBin] = useState(false)
+    const [count, setCount] = useState(1)
+
+
+    const storeData = useSelector(state => state.favoriteReducer)
 
     const {id} = useParams()
 
@@ -24,6 +30,8 @@ const ProductPage = () => {
             setProductId(id)
 
             const res = await getApiResurse(`${API_PRODUCTS}/${id}`)
+
+            storeData[id] ? setProductBin(true) : setProductBin(false)
 
 
             if(res) {
@@ -54,6 +62,9 @@ const ProductPage = () => {
                             productTitle={productTitle}
                             productImage={productImage}
                             productPrice={productPrice}
+                            productBin={productBin}
+                            setProductBin={setProductBin}
+                            count={count}
                         /> 
                     </div>
                 
@@ -65,9 +76,9 @@ const ProductPage = () => {
     );
 }
 
-ProductPage.propTypes = {
-    text: PropTypes.string
-}
+// ProductPage.propTypes = {
+//     text: PropTypes.string
+// }
 
 
 export default ProductPage;

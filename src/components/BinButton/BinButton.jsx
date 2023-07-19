@@ -11,23 +11,37 @@ const BinButton = ({
     productTitle,
     productImage,
     productPrice,
+    productBin,
+    setProductBin,
+    count
 }) => {
     const dispatch = useDispatch()
 
-    const set = () => {
-        dispatch(setProductToBin({
-            [productId]: {
-                title: productTitle,
-                img: productImage,
-                price: productPrice
-            }
-        }))
+    const dispatchProductToBin = () => {
+        if (productBin) {
+            dispatch(removeProductToBin(productId))
+            setProductBin(false)
+            
+        } else {
+            dispatch(setProductToBin({
+                [productId]: {
+                    title: productTitle,
+                    img: productImage,
+                    price: productPrice,
+                    count: count,
+                    id: Number(productId)
+                }
+            }))
+            setProductBin(true)
+        }
     }
 
     return (
-        <div className={style.button} onClick={set}>
+        <div className={style.button} onClick={dispatchProductToBin}>
             <img src={buy} alt="img"  className={style.img}/>
-            <span className={style.button__text}>Buy now</span>
+            {productBin 
+                ? <span className={style.button__text}>Remove from bin</span>
+                : <span className={style.button__text}>Add to bin</span>}
         </div>
     );
 }
@@ -36,7 +50,10 @@ BinButton.propTypes = {
     productId: PropTypes.string,
     productTitle: PropTypes.string,
     productImage: PropTypes.string,
-    productPrice: PropTypes.number
+    productPrice: PropTypes.number,
+    productBin: PropTypes.bool,
+    setProductBin: PropTypes.func,
+    count: PropTypes.number,
 }
 
 

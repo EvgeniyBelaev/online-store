@@ -1,0 +1,24 @@
+.container {
+    width: 150px;
+    height: 30px;
+    border: 1px solid var(--color-black);
+    border-radius: var( --border-radius-laege);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.symbol__container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;  
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.symbol:hover {
+    scale: 1.1;
+    text-shadow: var(--text-swadow-black);
+}

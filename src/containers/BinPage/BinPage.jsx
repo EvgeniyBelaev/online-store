@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux'
 
-import ProductsList from '@components/ProductsList'
+import BinList from '@components/BinList'
 
 import style from './BinPage.module.css';
 
@@ -19,8 +19,9 @@ const BinPage = () => {
                 return {
                     id: item[0],
                     title: item[1].title,
-                    image: item[1].img,
-                    price: item[1].price
+                    img: item[1].img,
+                    price: item[1].price,
+                    count: item[1].count
                 }
             })
 
@@ -32,7 +33,7 @@ const BinPage = () => {
         <>
             <h1 className='header__text'>Bin</h1>
             {product.length
-                ?<ProductsList product={product} />
+                ?<BinList product={product}/>
                 :<h2 className={style.comment}>Your bin is emty</h2>
             }
             

@@ -1,8 +1,12 @@
-import style from './ProductsList.module.css';
-import PropTypes from 'prop-types';
+
 import { Link } from 'react-router-dom'
 
+import PropTypes from 'prop-types';
+import style from './ProductsList.module.css';
+
 const ProductsList = ({product}) => {
+
+
     return (
         <ul className={style.list__container}>
             {product.map(({title, id, image, price}) => 
