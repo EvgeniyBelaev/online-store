@@ -24,8 +24,8 @@ const BinPage = () => {
                     count: item[1].count
                 }
             })
-
             setProduct(res)
+
         }
     }, [])
     
@@ -33,7 +33,7 @@ const BinPage = () => {
         <>
             <h1 className='header__text'>Bin</h1>
             {product.length
-                ?<BinList product={product}/>
+                ?<BinList product={product} setProduct={setProduct}/>
                 :<h2 className={style.comment}>Your bin is emty</h2>
             }
             

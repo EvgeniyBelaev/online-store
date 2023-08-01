@@ -43,20 +43,28 @@ const favoriteReducer = createSlice({
                 ...action.payload
             }
         },
+
         removePrioductFromBin: (state, action) => {
             return omit(state, [action.payload])
         },
+
         increment: (state, action) => {
             Object.entries(state).map((item) => {
                 if (Number(item[0]) === action.payload.id) {
-                    item[1].count += 1
+                    item[1].count++
                 }
             })
-
-        }
+        },
+        decrement: (state, action) => {
+            Object.entries(state).map((item) => {
+                if (Number(item[0]) === action.payload.id) {
+                    item[1].count--
+                }
+            })
+        },
     }
 })
 
-export const { addProductToBin,removePrioductFromBin, increment } = favoriteReducer.actions
+export const { addProductToBin,removePrioductFromBin, increment, decrement } = favoriteReducer.actions
 
 export default favoriteReducer.reducer

@@ -31,7 +31,6 @@ const BinButton = ({
                     price: productPrice,
                     count: count,
                     id: Number(productId),
-                    finalPrice: this.price * this.count
                 }
             }))
             setProductBin(true)

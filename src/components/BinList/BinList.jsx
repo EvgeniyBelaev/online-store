@@ -5,7 +5,7 @@ import CountButton from '@components/CountButton'
 
 import style from './BinList.module.css';
 
-const BinList = ({product}) => {
+const BinList = ({product, setProduct}) => {
     const [totalPrice, setTotalPrice] = useState(0)
 
     const prices = []
@@ -32,7 +32,7 @@ const BinList = ({product}) => {
                             <Link to={`/products/${id}`}><img src={img} alt="img" className={style.product__img} /></Link>
                             <span className={style.tpoduct__title}>{title}</span>
                             <div className={style.line__container}>
-                                <CountButton id={id} />
+                                <CountButton id={id} setProduct={setProduct}/>
                                 <span className={style.product__price}>Price: {price}$</span> 
                             </div>
                
@@ -48,8 +48,7 @@ const BinList = ({product}) => {
 
 BinList.propTypes = {
     product: PropTypes.array,
-    count: PropTypes.number,
-    setCount: PropTypes.func
+    setProduct: PropTypes.func
 }
 
 
