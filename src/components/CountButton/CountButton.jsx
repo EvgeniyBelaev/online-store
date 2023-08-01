@@ -2,17 +2,18 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { changeCount } from '@store/actions'
+import { increment, decrement } from '@store/reducers/favoriteReducer'
 
 
 import PropTypes from 'prop-types';
 import style from './CountButton.module.css';
 
 const CountButton = ({id}) => {
-    const [count, setCount] = useState()
-    const [productId, setProductId] = useState(1)
+    // const [count, setCount] = useState()
     const dispatch = useDispatch()
 
     const storeData = useSelector(state => state.favoriteReducer)
+    
 
 
     useEffect(() => {
@@ -20,20 +21,24 @@ const CountButton = ({id}) => {
 
         if (arr.length) {
             const res = arr.map(item => {
-                setCount(item[1].count)
-                setProductId(item[1].id)
+                if (item[1].id === Number(id)) {
+                    // setCount(item[1].count)
+                    
+                }     
+
             })
         }
     }, [])
 
 
-
+    
 
 
     const plus = () => {
         dispatch(changeCount({
+            id: Number(id),
 
-            id: id            
+           
         }))
     }
 
@@ -43,7 +48,7 @@ const CountButton = ({id}) => {
                 <span className={style.symbol}>-</span>
             </div>
             <span className={style.count}>{count}</span>
-            <div className={style.symbol__container} onClick={plus}>
+            <div className={style.symbol__container} onClick={() => dispatch(increment({id: Number(id)}))}>
                 <span className={style.symbol}>+</span>
             </div>
         </div>

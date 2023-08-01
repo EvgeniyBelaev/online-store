@@ -2,6 +2,7 @@ import buy from './img/buy.svg'
 import { useDispatch } from 'react-redux';
 
 import { setProductToBin, removeProductToBin } from '@store/actions'
+import { addProductToBin,removePrioductFromBin } from '@store/reducers/favoriteReducer'
 
 import PropTypes from 'prop-types';
 import style from './BinButton.module.css';
@@ -19,17 +20,18 @@ const BinButton = ({
 
     const dispatchProductToBin = () => {
         if (productBin) {
-            dispatch(removeProductToBin(productId))
+            dispatch(removePrioductFromBin(productId))
             setProductBin(false)
             
         } else {
-            dispatch(setProductToBin({
+            dispatch(addProductToBin({
                 [productId]: {
                     title: productTitle,
                     img: productImage,
                     price: productPrice,
                     count: count,
-                    id: Number(productId)
+                    id: Number(productId),
+                    finalPrice: this.price * this.count
                 }
             }))
             setProductBin(true)

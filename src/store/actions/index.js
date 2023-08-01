@@ -1,4 +1,5 @@
 import { ADD_PRODUCT_TO_BIN, REMOVE_PRODUCT_TO_BIN, CHANGE_COUNT } from '@store/constants/actionTypes'
+import { createSlice } from '@reduxjs/toolkit'
 
 export const setProductToBin = product => ({
     type: ADD_PRODUCT_TO_BIN,
@@ -10,7 +11,9 @@ export const removeProductToBin = productId => ({
     payload: productId
 })
 
-export const changeCount = id => ({
+export const changeCount = productCount => ({
     type: CHANGE_COUNT,
-    payload: id
+    payload: productCount
 })
+
+
