@@ -22,3 +22,8 @@
     scale: 1.1;
     text-shadow: var(--text-swadow-black);
 }
+.img {
+    width: 13px;
+    height: 15px;
+
+}
