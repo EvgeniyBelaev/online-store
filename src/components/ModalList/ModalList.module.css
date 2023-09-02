@@ -1,0 +1,27 @@
+.modal__contetnt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+}
+.modal__list {
+    list-style: none;
+}
+.modal__item {
+    margin-top: var(--spacing-small);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-small);
+    font-size: var(--font-size-small);
+}  
+.item__img {
+    width: 30px;
+} 
+.item__container {
+    display: flex;
+    gap: var(--spacing-small);
+}
+.item__count, .item__price {
+    text-transform: capitalize;
+}

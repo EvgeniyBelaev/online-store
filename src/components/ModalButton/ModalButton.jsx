@@ -1,8 +1,9 @@
 import style from './ModalButton.module.css';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import Modal from '@components/Modal';
 
-const ModalButton = () => {
+const ModalButton = ({totalPrice}) => {
     const [openModal, setOpenModal] = useState(false)
 
     open = () => {
@@ -12,12 +13,22 @@ const ModalButton = () => {
     }
 
     return (
-        <div className={style.modal__button} onClick={open}>place an order</div>
+        <>
+            <div className={style.modal__button} onClick={open}>place an order</div>
+            {
+                openModal && <Modal 
+                    setOpenModal={setOpenModal}
+                    totalPrice={totalPrice}
+                />
+            }
+        </>
+
+
     );
 }
 
 ModalButton.propTypes = {
-    text: PropTypes.string
+    totalPrice: PropTypes.number
 }
 
 

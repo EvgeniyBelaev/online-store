@@ -42,7 +42,7 @@ const BinList = ({product, setProduct}) => {
                     )}
             </ul>
             <div className={style.order}>
-                <ModalButton />
+                <ModalButton totalPrice={Number(totalPrice)} />
                 <p className={style.totalPrice}>Total price: {totalPrice}$ </p>
             </div>
 
