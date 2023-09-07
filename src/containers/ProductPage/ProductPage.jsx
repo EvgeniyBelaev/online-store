@@ -8,7 +8,7 @@ import ProductLinkBack from '@components/ProductLinkBack'
 import ProductImage from '@components/ProductImage'
 import BinButton from '@components/BinButton'
 
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import style from './ProductPage.module.css';
 
 const ProductPage = () => {

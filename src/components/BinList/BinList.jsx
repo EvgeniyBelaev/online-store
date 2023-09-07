@@ -13,6 +13,7 @@ const BinList = ({product, setProduct}) => {
     const storeData = useSelector(state => state.favoriteReducer)
 
     const prices = []
+    console.log(prices)
 
 
     Object.entries(storeData).map((item) => {
@@ -29,13 +30,13 @@ const BinList = ({product, setProduct}) => {
     return (
         <div className={style.list__container}>
             <ul className={style.wrapper}>
-                {product.map(({title, id, img, price}) => 
+                {product.map(({title, id, img, price, count}) => 
                         <li className={style.container} key={id}>
                             <Link to={`/products/${id}`}><img src={img} alt="img" className={style.product__img} /></Link>
                             <span className={style.tpoduct__title}>{title}</span>
                             <div className={style.line__container}>
                                 <CountButton id={id} product={product} setProduct={setProduct}/>
-                                <span className={style.product__price}>Price: {price}$</span> 
+                                <span className={style.product__price}>Price for one: {price}$</span> 
                             </div>
                
                         </li>

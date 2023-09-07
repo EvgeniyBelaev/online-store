@@ -16,7 +16,7 @@
 
 }
 .line__container {
-    width: 300px;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,6 +29,9 @@
 .product__img:hover {
     scale: 1.1;
     box-shadow: var(--box-shadow-black);
+}
+.product__price {
+    margin-left: var(--spacing-medium);
 }
 .order {
     padding: var(--spacing-medium);
