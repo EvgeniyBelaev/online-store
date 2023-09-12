@@ -29,3 +29,14 @@
     text-decoration: none;
 
 }
+
+@media screen and (max-width: 1090px) {
+    .container {
+        margin-left: var(--spacing-large);
+    }
+}
+@media screen and (max-width: 630px) {
+    .container {
+        margin-left: var(--spacing-small);
+    }
+}

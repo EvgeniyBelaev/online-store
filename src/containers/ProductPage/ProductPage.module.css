@@ -32,3 +32,16 @@
     font-size: var(--font-size-subheader)
 
 }
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product__description {
+        font-size: var(--font-size-small);
+    }
+}

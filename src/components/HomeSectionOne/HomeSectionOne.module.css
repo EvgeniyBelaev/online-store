@@ -75,3 +75,58 @@ a {
     object-position: center center;
     z-index: 2;
 }
+
+@media screen and (max-width: 1190px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper__cloth {
+        flex-direction: column;
+        align-items: center;
+    }
+    .jewerly__img {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 630px) {
+    .container, .wrapper__jewerly{
+        width: 480px;
+        margin-top: var(--spacing-large);
+    }
+    .img, .jewerly__img {
+        width: 400px;
+    }
+    .background {
+        width: 450px;
+        height: 450px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container, .wrapper__jewerly{
+        width: 380px;
+        margin-top: var(--spacing-large);
+    }
+    .img, .jewerly__img {
+        width: 300px;
+    }
+    .background {
+        width: 350px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .container, .wrapper__jewerly{
+        width: 280px;
+        margin-top: var(--spacing-large);
+    }
+    .img, .jewerly__img {
+        width: 200px;
+    }
+    .background {
+        width: 250px;
+        height: 150px;
+    }
+}

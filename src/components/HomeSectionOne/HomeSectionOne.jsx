@@ -7,7 +7,7 @@ import jewerly from './img/jewerly.jpg'
 
 const HomeSectionOne = () => {
     return (
-        <section>
+        <section className={style.wrapper}>
             <div className={style.wrapper__cloth}>
                 <NavLink to='/womancloth'>
                     <div className={style.container}>
