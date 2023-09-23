@@ -25,3 +25,10 @@
 .item__count, .item__price {
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 700px) {
+    .item__container {
+        min-width: 180px;
+    }
+    
+}

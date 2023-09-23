@@ -30,7 +30,7 @@ const BinList = ({product, setProduct}) => {
     return (
         <div className={style.list__container}>
             <ul className={style.wrapper}>
-                {product.map(({title, id, img, price, count}) => 
+                {product.map(({title, id, img, price}) => 
                         <li className={style.container} key={id}>
                             <Link to={`/products/${id}`}><img src={img} alt="img" className={style.product__img} /></Link>
                             <span className={style.tpoduct__title}>{title}</span>

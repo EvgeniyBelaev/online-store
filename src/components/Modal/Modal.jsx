@@ -26,10 +26,8 @@ const Modal = ({
                 <div className={style.modal__footer}>
                     <span className={style.modal__text}>totalPrice: {totalPrice} $</span>
                     <ModalOrderButton setOpenModal={setOpenModal} />
-                </div>
-                
+                </div>                    
             </div>
-
         </div>
         
     );

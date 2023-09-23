@@ -11,3 +11,10 @@
     scale: 1.1;
     box-shadow: var(--box-shadow-black);
 }
+
+@media screen and (max-width: 480px) {
+    .modal__button {
+        font-size: var(--font-size-ultrasmall);
+        padding: var(--spacing-small) var(--spacing-small);
+    }
+}

@@ -45,3 +45,21 @@
 .totalPrice {
     font-size: var(--font-size-header);
 }
+
+@media screen and (max-width: 460px) {
+    .container {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 350px) {
+    .line__container {
+        flex-direction: column;
+        gap: var(--spacing-medium);
+    }
+    .totalPrice {
+        font-size: var(--font-size-subheader);
+    }
+    .order {
+        gap: 100px;
+    }
+}
