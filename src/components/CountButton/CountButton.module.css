@@ -25,5 +25,9 @@
 .img {
     width: 13px;
     height: 15px;
+    transition: all var(--transition);
 
+}
+.img:hover {
+    scale: 1.1;
 }

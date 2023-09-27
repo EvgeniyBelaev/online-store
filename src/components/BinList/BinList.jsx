@@ -9,11 +9,11 @@ import style from './BinList.module.css';
 
 const BinList = ({product, setProduct}) => {
     const [totalPrice, setTotalPrice] = useState(0)
+    const [onePrice, setOnePrice] = useState(0)
 
     const storeData = useSelector(state => state.favoriteReducer)
 
     const prices = []
-    console.log(prices)
 
 
     Object.entries(storeData).map((item) => {
@@ -27,6 +27,12 @@ const BinList = ({product, setProduct}) => {
 
     })
 
+    useEffect(() => {
+        Object.entries(storeData).map((item) => {
+            setOnePrice(item[1].price * item[1].count )
+        })
+    })
+
     return (
         <div className={style.list__container}>
             <ul className={style.wrapper}>
@@ -36,7 +42,7 @@ const BinList = ({product, setProduct}) => {
                             <span className={style.tpoduct__title}>{title}</span>
                             <div className={style.line__container}>
                                 <CountButton id={id} product={product} setProduct={setProduct}/>
-                                <span className={style.product__price}>Price for one: {price}$</span> 
+                                <span className={style.product__price}>Price for one: {price}</span> 
                             </div>
                
                         </li>
