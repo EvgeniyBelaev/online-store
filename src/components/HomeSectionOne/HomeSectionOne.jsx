@@ -11,7 +11,7 @@ const HomeSectionOne = () => {
             <div className={style.wrapper__cloth}>
                 <NavLink to='/womancloth'>
                     <div className={style.container}>
-                        <span className={style.text}>For Woman's</span>
+                        <span className={style.text}>For Woman</span>
                         <img src={womansCloth} alt="img" className={style.img} />
                         <div className={style.background}></div>
                     </div>
@@ -20,7 +20,7 @@ const HomeSectionOne = () => {
                     <div className={style.container}>
                         <div className={style.background}></div>
                         <img src={mansCloth} alt="img" className={style.img} />
-                        <span className={style.text}>For Man's</span>
+                        <span className={style.text}>For Man</span>
                     </div>
                 </NavLink>
             </div>
